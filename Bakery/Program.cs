@@ -18,9 +18,23 @@ namespace Bakery
       Console.WriteLine("Pastry: Buy 1 for $2 or 3 for $5.");
       Console.WriteLine("----------------------");
       Console.WriteLine("Would you like to place an order? (Yes/No):");
-      string answer = (Console.ReadLine()).ToLower;
+      string answer = Console.ReadLine();
+      answer = answer.ToLower();
 
+      if(answer == "yes") 
+      {
+        Console.WriteLine("Do you wanna buy bread?");
+        string breadBuy = Console.ReadLine();
+        
 
+        Console.WriteLine("Do you wanna buy pastry?");
+        string pastryBuy = Console.ReadLine();
+      } else if (answer == "no") 
+      {
+        Console.WriteLine("Thank you for visiting! Come again soon!");
+      } else {
+        Console.WriteLine("Wrong input. Please, enter 'yes' or 'no'!");
+      }
     }
   }
 }
