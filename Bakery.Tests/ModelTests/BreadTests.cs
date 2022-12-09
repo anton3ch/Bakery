@@ -13,5 +13,11 @@ namespace Bakery.Tests
       Bread testBread = new Bread();
       Assert.AreEqual(5, testBread.TotalCost(1));
     }
+
+    public void TotalCost_ShouldReturnTotalCostOfTwoLoafsOfBread_PriceForTwoLoafs()
+    {
+      Bread testBread = new Bread();
+      Assert.AreEqual(5, testBread.TotalCost(2));
+    }
   }
 }
