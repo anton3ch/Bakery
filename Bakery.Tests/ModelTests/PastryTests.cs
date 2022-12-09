@@ -6,12 +6,11 @@ namespace Bakery.Tests
   [TestClass]
   public class PastryTests
   {
-    // Test methods go here
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void TotalCost_ShouldReturnTotalCostOfOnePastry_PriceForOnePastry()
     {
-      // any necessary logic to prep for test; instantiating new classes, etc.
-      Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
+      Pastry testPastry = new Pastry();
+      Assert.AreEqual(2, testPastry.TotalCost(1));
     }
   }
 }
