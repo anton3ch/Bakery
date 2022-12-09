@@ -14,10 +14,18 @@ namespace Bakery.Tests
       Assert.AreEqual(5, testBread.TotalCost(1));
     }
 
+    [TestMethod]
     public void TotalCost_ShouldReturnTotalCostOfTwoLoafsOfBread_PriceForTwoLoafs()
     {
       Bread testBread = new Bread();
-      Assert.AreEqual(5, testBread.TotalCost(2));
+      Assert.AreEqual(10, testBread.TotalCost(2));
+    }
+
+    [TestMethod]
+    public void TotalCost_ShouldReturnTotalCostOfTenLoafsOfBread_PriceTenLoafs()
+    {
+      Bread testBread = new Bread();
+      Assert.AreEqual(35, testBread.TotalCost(10));
     }
   }
 }
