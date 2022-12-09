@@ -2,9 +2,9 @@ namespace Bakery
 {
   public class Pastry
   {
-    public int Price { get; set; } = 2;
+    public static int Price { get; set; } = 2;
 
-    public int TotalCost(int quantity)
+    public static int TotalCost(int quantity)
     {
       int finalCost = 0;
       if (quantity < 3)
