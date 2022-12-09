@@ -23,12 +23,31 @@ namespace Bakery
 
       if(answer == "yes") 
       {
-        Console.WriteLine("Do you wanna buy bread?");
+        Console.WriteLine("Do you wanna buy bread?(Y/N)");
         string breadBuy = Console.ReadLine();
-        
-
-        Console.WriteLine("Do you wanna buy pastry?");
+        breadBuy = breadBuy.ToLower();
+        if(breadBuy == "yes")
+        {
+          Console.WriteLine("----------------------");
+          Console.WriteLine("The special is Buy 2, get 1 free.");
+          Console.WriteLine("How many would you like?");
+          string breadQuantityStr = Console.ReadLine();
+          int breadQuantity = Int32.Parse(breadQuantityStr);
+        }
+        Console.WriteLine("----------------------");
+        Console.WriteLine("Do you wanna buy pastry?(Y/N)");
         string pastryBuy = Console.ReadLine();
+        pastryBuy = pastryBuy.ToLower();
+        
+        if(pastryBuy == "yes")
+        {
+          Console.WriteLine("----------------------");
+          Console.WriteLine("The special is Buy 1 for $2 or 3 for $5.");
+          Console.WriteLine("How many would you like?");
+          string pastryQuantityStr = Console.ReadLine();
+          int pastryQuantity = Int32.Parse(pastryQuantityStr);
+        }
+
       } else if (answer == "no") 
       {
         Console.WriteLine("Thank you for visiting! Come again soon!");
