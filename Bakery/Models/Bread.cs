@@ -7,8 +7,12 @@ namespace Bakery
     public int TotalCost(int quantity)
     {
       int finalCost = 0;
-      if (quantity < 3) {
-        finalCost += Price * quantity;
+      if (quantity < 3)
+      {
+        finalCost = Price * quantity;
+      } else if (quantity >= 3)
+      {
+        finalCost = Price * (quantity - quantity / 3);
       }
       return finalCost;
     }
