@@ -26,8 +26,8 @@ namespace Bakery
 
         if(answer == "yes") 
         {
-          int breadQuantity;
-          int pastryQuantity;
+          int breadQuantity = 0;
+          int pastryQuantity = 0;
           bool breadLoop = true;
           bool pastryLoop = true;
           bool orderedBread = false;
@@ -87,8 +87,29 @@ namespace Bakery
 
           if(orderedBread && orderedPastry)
           {
+            int breadCost = Bread.TotalCost(breadQuantity);
+            int pastryCost = Pastry.TotalCost(pastryQuantity);
             repeat = false;
-          } 
+            Console.WriteLine("----------------------");
+            Console.WriteLine($"Bread____Qt{breadQuantity}___${breadCost}");
+            Console.WriteLine($"Pastry___Qt{pastryQuantity}___${pastryCost}");
+            Console.WriteLine($"Order Total is ${pastryCost + breadCost}");
+
+          } else if(orderedBread)
+          {
+            int breadCost = Bread.TotalCost(breadQuantity);
+            repeat = false;
+            Console.WriteLine("----------------------");
+            Console.WriteLine($"Bread____Qt{breadQuantity}___${breadCost}");
+            Console.WriteLine($"Order Total is ${breadCost}");
+          } else if(orderedPastry)
+          {
+            int pastryCost = Pastry.TotalCost(pastryQuantity);
+            repeat = false;
+            Console.WriteLine("----------------------");
+            Console.WriteLine($"Pastry___Qt{pastryQuantity}___${pastryCost}");
+            Console.WriteLine($"Order Total is ${pastryCost}");
+          }
 
         } else if (answer == "no") 
         {
