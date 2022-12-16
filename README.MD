@@ -41,6 +41,12 @@ Pierre's Bakery lets users select what items they want to buy and calculates tot
    ~/Desktop/Bakery.Solution/Bakery $ dotnet run
   ```
 
+#### To run the tests for the program:
+
+1. ~/Desktop $ cd Bakery.Solution
+2. $ cd Bakery.Tests
+3. Run the tests with $ dotnet test
+
 ## Known Bugs
 
 
